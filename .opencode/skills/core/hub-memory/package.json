@@ -1,0 +1,23 @@
+{
+  "name": "@oyi77/centralized-memory",
+  "version": "1.0.0",
+  "description": "Bidirectional memory client - Query BEFORE acting (IQ 145 pattern)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": ["memory", "rag", "mcp", "ai"],
+  "author": "OYI77",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "peerDependencies": {
+    "axios": ">=1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oyi77/dotfiles"
+  }
+}
