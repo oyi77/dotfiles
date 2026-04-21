@@ -1,0 +1,174 @@
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "ANTHROPIC_AUTH_TOKEN": "330394050e454dc2860a181462e69ecb.sCYvtciEiGbNpLnW",
+    "ANTHROPIC_BASE_URL": "https://api.z.ai/api/anthropic",
+    "API_TIMEOUT_MS": "3000000",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(find /mnt/data/openclaw/projects/openclaw-saas-bot -maxdepth 3 -name *.test.ts -o -name jest*.config.*)",
+      "Bash(grep -r \"jest.e2e\\\\|e2e\" /mnt/data/openclaw/projects/openclaw-saas-bot --include=*.json --include=*.js)",
+      "Bash(find /mnt/data/openclaw/projects/openclaw-saas-bot -name jest.e2e* -o -name *.e2e.*)",
+      "Bash(grep -l \"telethon\\\\|Telethon\" /home/openclaw/.openclaw/workspace/*.py)",
+      "Bash(find /home/openclaw/.openclaw/workspace -name *.py -maxdepth 1)",
+      "Read(//tmp/**)",
+      "Read(//home/openclaw/**)",
+      "Bash(pip3 list:*)",
+      "Bash(python3 -c \"import telethon; print\\(telethon.__version__\\)\")",
+      "Bash(python3 -c :*)",
+      "Bash(python3 test_e2e_full_flows.py)",
+      "Bash(npm run:*)",
+      "Bash(pm2 list:*)",
+      "Bash(cp:*)",
+      "Bash(find /home/openclaw/.openclaw -name .env -o -name *.env)",
+      "Bash(redis-cli:*)",
+      "Bash(xargs -r redis-cli DEL)",
+      "Bash(find /home/openclaw -type d -name *content* -o -name *prompt* -o -name *viral*)",
+      "Bash(find /home/openclaw/.openclaw/workspace -maxdepth 2 -type d -name *content* -o -name *prompt* -o -name *template*)",
+      "Bash(find /mnt/data -type f \\\\\\(-name *viral*pipeline* -o -name *prompt*database* -o -name *content*template* \\\\\\))",
+      "Bash(find /mnt/data -type f \\\\\\(-name *n8n* -o -name *workflow* \\\\\\))",
+      "Bash(find /mnt/data -type d -name *content-kingdom* -o -name *prompt-template*)",
+      "Bash(find /mnt/data/openclaw/workspace -type f \\\\\\(-name *prompt*.md -o -name *guideline*.md -o -name *quality*.md -o -name *best-practice*.md -o -name *prompt*.json -o -name *template*.md \\\\\\))",
+      "Bash(find /mnt/data -type f -name *prompt*database* -o -name *content*database* -o -name *viral*database*)",
+      "Bash(find /mnt/data -type f -name *hook*.json -o -name *viral*.json)",
+      "Bash(find /mnt/data -type f -name *quality*.py -o -name *guideline*.py -o -name *best*practice*.py)",
+      "Bash(find /mnt/data -type f -name *flosia*)",
+      "Bash(find /mnt/data -type f -name *.md -path *prompt* -o -path *quality* -o -path *guideline*)",
+      "Bash(find /mnt/data/openclaw/workspace -name README* -o -name *strategy* -o -name *framework* -o -name *principle*)",
+      "Bash(ls -la /mnt/data/berkahkarya/skills/1ai-skills/content/content-kingdom/modules/*.py)",
+      "Bash(npx tsc:*)",
+      "Bash(ls -la /tmp/unified_visual_marketing*)",
+      "Bash(ls /tmp/*.md)",
+      "Bash(ls -la /tmp/unified*)",
+      "Bash(pip list:*)",
+      "Bash(find /mnt/data -maxdepth 3 -type f \\\\\\(-name *audio* -o -name *voice* -o -name *whisper* -o -name *tts* \\\\\\))",
+      "Bash(find /mnt/data -maxdepth 3 -type d \\\\\\(-name *audio* -o -name *voice* -o -name *speech* \\\\\\))",
+      "Bash(find /mnt/data -maxdepth 4 -type f \\\\\\(-name *.py \\\\\\))",
+      "Bash(find /mnt/data -type f -name requirements*.txt)",
+      "Bash(find /mnt/data/output -type f -name *.mp3 -o -name *.wav)",
+      "Bash(find /home/openclaw/.openclaw/workspace -type f \\\\\\(-name *.mp3 -o -name *.wav \\\\\\))",
+      "Bash(find /mnt/data/openclaw/workspace -maxdepth 3 -name *.py -type f)",
+      "Bash(grep -r \"merge_audio\\\\|audio_mix\\\\|mix.*audio\\\\|subtitle\\\\|srt\\\\|vtt\" /mnt/data/openclaw/workspace/scripts/*.py)",
+      "Bash(find /mnt/data -type f -name *.py)",
+      "Bash(find /mnt/data -type f -name *.sh)",
+      "Bash(find /mnt/data -type f -name *.json)",
+      "Bash(grep -r \"ELEVENLABS\\\\|GOOGLE_TTS\\\\|OPENAI.*WHISPER\\\\|EDGE_TTS\" /mnt/data/openclaw/projects/openclaw-saas-bot --include=*.ts --include=*.js --include=*.env*)",
+      "Bash(grep:*)",
+      "Bash(find /home/openclaw/.openclaw/workspace -name *.json -path *n8n* -o -name *n8n*.json)",
+      "Bash(python3 -c \"import edge_tts; print\\(''''edge-tts OK''''\\)\")",
+      "Bash(pip3 install:*)",
+      "Bash(python3 -m json.tool)",
+      "Bash(python3:*)",
+      "Bash(edge-tts --help)",
+      "Bash(sudo systemctl:*)",
+      "Bash(pg_ctl start:*)",
+      "Bash(sudo service:*)",
+      "Bash(pg_isready)",
+      "Bash(sudo pg_ctlcluster 16 main start)",
+      "Read(//etc/postgresql/**)",
+      "Bash(pg_lsclusters)",
+      "Bash(sudo pg_ctlcluster 18 main start)",
+      "Bash(/usr/lib/postgresql/18/bin/pg_ctl start:*)",
+      "Bash(su - postgres -c \"/usr/lib/postgresql/18/bin/pg_ctl start -D /var/lib/postgresql/18/main\")",
+      "Bash(find /mnt/data/openclaw/projects/openclaw-saas-bot -name *.test.ts -o -name *.spec.ts)",
+      "Bash(wc -l /mnt/data/openclaw/projects/openclaw-saas-bot/src/services/*.ts)",
+      "Bash(redis-server --daemonize yes)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\({k:v for k,v in d.items\\(\\) if ''''db'''' in k.lower\\(\\) or ''''post'''' in k.lower\\(\\) or ''''pass'''' in k.lower\\(\\)}, indent=2\\)\\)\")",
+      "Bash(# Prepare test session and image\ncp /home/openclaw/.openclaw/workspace/.vilona/sessions/paijo.session /tmp/e2e_test_paijo.session 2>/dev/null\npython3 -c \"\nfrom PIL import Image, ImageDraw\nimg = Image.new\\('RGB', \\(800, 600\\), color='#2196F3'\\)\ndraw = ImageDraw.Draw\\(img\\)\ndraw.rectangle\\([100, 100, 700, 500], fill='#FFFFFF'\\)\ndraw.text\\(\\(250, 250\\), 'OpenClaw Test Image', fill='#333333'\\)\nimg.save\\('/tmp/test_reference_image.jpg', 'JPEG', quality=90\\)\nprint\\('Test image ready'\\)\n\" 2>/dev/null && echo \"Image ready\" || echo \"PIL not available, using existing\"\nls -la /tmp/test_reference_image.jpg /tmp/e2e_test_paijo.session 2>/dev/null)",
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Bash(python3 -c \"import sys,json; d=json.loads\\(sys.stdin.read\\(\\)\\); print\\(d.get\\(''''message'''',{}\\).get\\(''''content'''',[{}]\\)[0].get\\(''''text'''',''''''''\\)[:200] if isinstance\\(d.get\\(''''message'''',{}\\).get\\(''''content'''',[]\\),list\\) else ''''working...''''\\)\")",
+      "Bash(npx jest:*)",
+      "Bash(npm test:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git add:*)",
+      "Bash(curl -s \"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyBXvhy1IOgjazJATNsj_tesxwqciqYZj0s\" -H 'Content-Type: application/json' -d '{\"\"\"\"contents\"\"\"\":[{\"\"\"\"parts\"\"\"\":[{\"\"\"\"text\"\"\"\":\"\"\"\"Say hello\"\"\"\"}]}]}')",
+      "Bash(curl -s \"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyBXvhy1IOgjazJATNsj_tesxwqciqYZj0s\" -H 'Content-Type: application/json' -d '{\"\"\"\"contents\"\"\"\":[{\"\"\"\"parts\"\"\"\":[{\"\"\"\"text\"\"\"\":\"\"\"\"Say hello in one word\"\"\"\"}]}]}')",
+      "Bash(echo \"  → duration_15_1 → scene.duration = 15 → provider needs maxDuration >= 15\")",
+      "Bash(find /home/openclaw -name *remotion*)",
+      "Bash(find /mnt/data/openclaw/workspace -name *auto-clipper* -o -name *clipper*)",
+      "Bash(find /mnt/data/openclaw/workspace/remotion* -name *.ts -o -name *.tsx -o -name *.json)",
+      "Bash(find /mnt/data/openclaw/workspace/skills -name *.py -path */video*)",
+      "Bash(git reset:*)",
+      "Bash(/dev/null git:*)",
+      "Bash(find /mnt/data/openclaw/projects/openclaw-saas-bot/prisma -name *.ts -o -name *.sql)",
+      "Bash(npx prisma:*)",
+      "Bash(npx tsx:*)",
+      "Bash(ls -la /mnt/data/openclaw/projects/openclaw-saas-bot/src/*.ts)",
+      "WebSearch",
+      "Bash(curl -s http://localhost:20128/v1/models -H \"Authorization: Bearer sk-7c91e35b7767211b-77ygef-d474991f\")",
+      "Bash(npm ls:*)",
+      "Bash(ffmpeg -filters)",
+      "Bash(ffmpeg -i /dev/null -vf \"delogo=x=10:y=10:w=100:h=50\" -f null -)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:docs.geminigen.ai)",
+      "WebFetch(domain:geminigen.ai)",
+      "Bash(*)",
+      "WebFetch(domain:invideo.io)",
+      "WebFetch(domain:pictory.ai)",
+      "WebFetch(domain:www.synthesia.io)",
+      "WebFetch(domain:creatify.ai)",
+      "WebFetch(domain:www.capcut.com)",
+      "WebFetch(domain:docs.duitku.com)",
+      "WebFetch(domain:*)"
+    ],
+    "defaultMode": "default"
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "node $HOME/.claude/hud/omc-hud.mjs"
+  },
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true,
+    "oh-my-claudecode@omc": true,
+    "glm-plan-usage@zai-coding-plugins": true,
+    "glm-plan-bug@zai-coding-plugins": true,
+    "frontend-design@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "context7@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "omc": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/Yeachan-Heo/oh-my-claudecode.git"
+      }
+    },
+    "zai-coding-plugins": {
+      "source": {
+        "source": "directory",
+        "path": "/home/openclaw/.npm/_npx/2f024689b4d0d3b0/node_modules/@z_ai/coding-helper/zai-coding-plugins"
+      }
+    },
+    "thedotmack": {
+      "source": {
+        "source": "github",
+        "repo": "thedotmack/claude-mem"
+      }
+    }
+  },
+  "fastMode": true,
+  "mcpServers": {
+    "ebook-generator": {
+      "command": "/home/linuxbrew/.linuxbrew/bin/python3",
+      "args": [
+        "/home/openclaw/projects/1ai-ebook/mcp_server.py"
+      ],
+      "env": {
+        "OMNIROUTE_BASE_URL": "http://localhost:20128/v1",
+        "EBOOK_API_KEY": "dev-key-change-me"
+      }
+    },
+    "berkahkarya-brain": {
+      "command": "python",
+      "args": ["-m", "src.mcp.http_router"],
+      "cwd": "/home/openclaw/projects/berkahkarya-hub",
+      "env": {
+        "BERKAHKARYA_HUB_URL": "http://localhost:9099"
+      }
+    }
+  }
+}
