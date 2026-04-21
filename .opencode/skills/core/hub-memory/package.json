@@ -1,5 +1,5 @@
 {
-  "name": "@oyi77/centralized-memory",
+  "name": "centralized-memory-client",
   "version": "1.0.0",
   "description": "Bidirectional memory client - Query BEFORE acting (IQ 145 pattern)",
   "main": "index.js",
